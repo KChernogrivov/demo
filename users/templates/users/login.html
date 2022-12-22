@@ -1,0 +1,15 @@
+{% extends 'users/base.html' %}
+
+{% block title %}
+    <h2>Вход</h2>
+{% endblock title %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ form.password.errors }}
+        <button type="submit">Войти</button>
+    </form>
+{% endblock content %}
+
